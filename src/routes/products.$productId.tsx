@@ -121,7 +121,7 @@ function ProductPage() {
               Finish — {color}
             </p>
             <div className="flex gap-3">
-              {product.colors.map((c) => (
+              {product.colors.map((c: { name: string; hex: string }) => (
                 <button
                   key={c.name}
                   onClick={() => setColor(c.name)}
@@ -167,7 +167,7 @@ function ProductPage() {
               Specification
             </p>
             <dl className="grid grid-cols-2 gap-y-4 gap-x-6">
-              {product.specs.map((s) => (
+              {product.specs.map((s: { label: string; value: string }) => (
                 <div key={s.label}>
                   <dt className="text-[10px] uppercase tracking-[0.2em] text-foreground/40">
                     {s.label}
