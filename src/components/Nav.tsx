@@ -3,13 +3,6 @@ import { useCart } from "@/lib/cart";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
 
-const links = [
-  { to: "/shop", label: "Collections" },
-  { to: "/shop", label: "Innovation", search: { category: "core" as const } },
-  { to: "/about", label: "Archive" },
-  { to: "/about", label: "About" },
-];
-
 export function Nav() {
   const { count } = useCart();
   const [open, setOpen] = useState(false);
